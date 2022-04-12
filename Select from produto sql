@@ -1,0 +1,11 @@
+elect 
+Produto.ID_Categoria,Categoria.Descricao_Categoria,
+
+Produto. ID_Subcategoria, Descricao_Subcategoria, Produto. ID_Produto, Produto. Descricao_Produto
+
+From Produto
+
+Inner Join Subcategoria.ON Subcategoria.ID_Subcategoria = Produto.ID_Subcategoria
+Inner JOIN Categoria ON Categoria.ID_categoria = Produto.ID_Categoria
+
+Where(Produto.ID_Categoria=1)

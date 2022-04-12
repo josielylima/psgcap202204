@@ -1,0 +1,28 @@
+-Select Subcategoria.ID_Subcategoria,Subcategoria.Descricao_Subcategoria, Subcategoria.ID_categoria, Categoria.Descricao_Categoria
+
+--From Subcategoria
+
+--INNER JOIN Categoria On Categoria.ID_categoria= Subcategoria.ID_categoria
+
+--Select Categoria.ID_categoria,Descricao_Categoria,Subcategoria.ID_Subcategoria,Subcategoria.Descricao_Subcategoria
+
+--From Subcategoria
+
+
+--Inner Join  Categoria on Categoria.ID_Categoria=Subcategoria.ID_categoria
+--WHERE(Subcategoria.ID_categoria=5)
+
+Select Categoria.ID_categoria,
+Categoria.Descricao_Categoria,
+Subcategoria.ID_Subcategoria,
+Subcategoria.Descricao_Subcategoria,
+Subcategoria.Situacao
+From Subcategoria
+
+Inner Join categoria on Categoria.ID_categoria=Subcategoria.ID_categoria
+Where(Subcategoria.ID_categoria=3 or Subcategoria.ID_categoria= 5 or Subcategoria.ID_categoria=7 or Subcategoria.ID_categoria=9)
+
+
+
+
+

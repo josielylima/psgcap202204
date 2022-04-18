@@ -1,0 +1,23 @@
+Select * From Exercicio Where ( Situacao = 1)
+
+Select * From Exercicio Where Nota_Exercicio < 4
+
+
+Alter Table Exercicio
+
+  ADD
+  DataAlteracao Datetime Null,
+  DataExclusao Datetime Null
+
+  GO
+
+  
+UPDATE Exercicio
+SET
+     Situacao = 0,
+	 DataAlteracao = GETDATE(),
+	 DataExclusao = GETDATE ()
+
+WHERE Nota_Exercicio < 4
+
+GO

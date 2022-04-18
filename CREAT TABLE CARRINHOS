@@ -1,0 +1,48 @@
+-- CREATE TABLE CLIENTE(
+-- ID_Cliente Int Not Null Identity (1,1),
+-- Nome_Cliente Varchar(Max) Not Null,
+-- Endereço_Cliente Varchar(255) Not Null,
+-- Cpf_Cliente Varchar(14) Not Null,
+-- Situacao BIT Null Default 1,
+-- Datainclusao Datetime null default getdate(),
+-- Dataexclusao Datetime null
+
+-- Constraint Pk_Cliente Primary Key (ID_Cliente),
+--)
+
+
+--CREATE TABLE PEDIDO(
+--ID_Pedido Int NOT NULL Identity (1,1),
+--ID_Cliente Int NOT Null,
+--ID_Carrinho Int Not NUll,
+--Observacoes_Pedido Varchar(Max) Null,
+--Situacao Bit Null DEFAULT 1,
+--Datainclusao DateTime Null,
+--DataExclusao Datetime Null
+--Constraint PK_pedido Primary Key (ID_Pedido )
+
+--)
+
+--Create Table Carrinho (
+--ID_Carrinho Int Not Null identity (1,1),
+--ID_Pedido Int Not Null,
+--Situacao Bit Null Default 1,
+--Datainclusao DateTime Null Default GetDate(),
+--DataExclusao Datetime Null
+--Constraint PK_Carrinho Primary Key (ID_Carrinho)
+--)
+
+
+--CREATE TABLE Carrinho_Itens (
+
+-- ID_Carrinho_Itens Int Not Null Identity (1,1),
+-- ID_Carrinho INT Not NUll,
+-- ID_Produto Int Not Null,
+-- Qtde_Produto Int Not Null,
+-- Situacao Bit Null Default 1,
+-- Datainclusao DateTime Null Default GetDate(),
+-- DataExclusao Datetime Null
+-- Constraint Pk_Carrinho_Itens Primary Key (ID_Carrinho_Itens),
+-- Constraint Fk_Carrinho_Carrinho_Itens Foreign Key (ID_Carrinho) References  Carrinho(ID_Carrinho),
+-- Constraint Fk_Produto_Carrinho_Itens Foreign Key (ID_Produto) References Produto (ID_Produto)        
+-- )

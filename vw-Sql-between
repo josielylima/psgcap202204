@@ -1,0 +1,7 @@
+SELECT        ID_Funcionario, Matricula_Funcionario, Nome_funcionario, Sobrenome_Funcionario, Ctps_Funcionario, Data_Admissao_Funcionario, Sexo_Funcionario, Datanasc_Funcionario, Email_Funcionario
+FROM            VW_funcionarios_Informacoes
+Where (Data_Admissao_Funcionario
+Between '01/01/1985' --Convert(datetime, '1985-01-01')
+   And '31/12/1985') --Convert(datetime, '1985-12-01'))
+   --And (Sexo_Funcionario = 'F')
+Order By Data_Admissao_Funcionario  asc

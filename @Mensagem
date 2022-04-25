@@ -1,0 +1,4 @@
+Declare @Mensagem Varchar(Max)
+Set @Mensagem = 'Oi Mundo'
+Select @Mensagem
+Go

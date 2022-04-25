@@ -1,0 +1,5 @@
+Select GETDATE() AS 'Data Atual',
+
+Day(GETDATE()) As 'Dia Atual',
+  Month(GETDATE()) As 'Mes Atual',
+Year(GetDate()) As ' Ano Atual'

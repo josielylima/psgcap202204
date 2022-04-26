@@ -1,0 +1,16 @@
+PESQUISAR NA PROCEDURE
+EXEC SP_OBTER_DATA
+GO
+
+CREATE PROCEDURE SP_OBTER_DATA
+AS
+BEGIN
+DECLARE @DATA DATETIME
+SET @DATA = GETDATE()
+Select (@DATA) As 'Data Atual',
+Year (@DATA) AS 'Ano Atual',
+MONTH(@DATA) AS 'Mes Atual',
+Day (@DATA) AS 'Dia Atual',
+DATEPART (week, @DATA) As 'Dia da Semana'
+
+END;

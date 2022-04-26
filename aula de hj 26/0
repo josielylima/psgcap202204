@@ -1,0 +1,20 @@
+Declare @Matricula Bigint
+
+Set @Matricula = 20100154323
+
+ Select
+  FDP. ID_Funcionario, 
+  FDP. Matricula_Funcionario, 
+  FDP. Nome_Funcionario, 
+  FDP. Sobrenome_Funcionario, 
+  FDE. Data_Admissao_Funcionario, 
+  FDE. Ctps_Funcionario, 
+  FDP. Sexo_Funcionario, 
+  FDP. Datanasc_Funcionario, 
+  FDP. Email_Funcionario
+From Funcionarios_Dados_Empresa AS FDE INNER JOIN
+ Funcionario_Dados_Pessoais AS FDP ON FDE. Matricula_Funcionario = FDP. Matricula_Funcionario
+Where  (FDP. Situacao = 1)
+And (FDP.Matricula_Funcionario) = @Matricula
+Order BY Matricula_Funcionario
+Go

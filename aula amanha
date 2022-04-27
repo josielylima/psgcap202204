@@ -1,0 +1,37 @@
+Declare @Funcionario_Tempo Int
+Declare @ChaveIncial Int
+Declare @ChaveSelecionada Int
+Declare @QTDE Int
+
+Declare @Contador Int
+Declare @Chave int
+
+Set @QTDE = 0
+While (@QTDE = 0)
+Begin
+
+Set @Funcionario_Tempo = (Select Count(*) From Funcionario_Tempo)
+Set @ChaveIncial = (Select min(ID_Funcionario_Tempo) From Funcionario_Tempo)
+Set @ChaveSelecionada = (Select FLOOR(Rand() * (@Funcionario_Tempo-@ChaveIncial) +  @ChaveIncial))
+Set @QTDE=(Select Count (*) From Funcionario_Tempo Where ID_Funcionario_Tempo = @ChaveSelecionada)
+
+END
+
+
+Select
+
+      Matricula_Funcionario_Tempo,
+      Nome_funcionario_Tempo,
+      Sobrenome_Funcionario_Tempo,
+      Sexo_Funcionario_Tempo,
+      Data_Nasc_Funcionario_Tempo
+	  ID_Pais,
+      Data_Admissao_Funcionario_Tempo,
+      Ctps_Funcionario_Tempo,
+       Email_Funcionario
+
+
+From Funcionario_Tempo
+
+Where ID_Funcionario_Tempo = @ChaveSelecionada
+

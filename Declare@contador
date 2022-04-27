@@ -1,0 +1,17 @@
+Declare @Contador int
+Set @Contador = 0
+
+While(@Contador <= 10)
+Begin
+    Print 'Valor do Contador ='  + Convert(VARCHAR, @Contador)
+	Set @Contador = @Contador + 1
+	IF(@Contador = 5)
+	Begin
+	Print 'NUMERO MÁGICO'
+	
+	END
+End
+Print 'TERMINEI!!!'
+
+Go
+

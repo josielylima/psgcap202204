@@ -1,0 +1,30 @@
+Insert Into Funcionario_Tempo(
+  ID_Funcionario_Tempo,
+  Matricula_Funcionario_Tempo,
+  Nome_funcionario_Tempo,
+  Sobrenome_Funcionario_Tempo, 
+  Data_Admissao_Funcionario_Tempo, 
+  Ctps_Funcionario_Tempo, 
+  Sexo_Funcionario_Tempo, 
+  Data_Nasc_Funcionario_Tempo, 
+  Email_Funcionario,
+  ID_Pais
+)  
+SELECT 
+   FDP.ID_Funcionario,
+   FDP.Matricula_Funcionario,
+  FDP.Nome_funcionario,
+  FDP.Sobrenome_Funcionario, 
+   FDE.Data_Admissao_Funcionario, 
+   FDE.Ctps_Funcionario, 
+   FDP.Sexo_Funcionario, 
+	FDP. Datanasc_Funcionario, 
+   FDP.Email_Funcionario,
+   FDP.ID_Pais
+FROM Atacado202204.dbo.Funcionario_Dados_Pessoais AS FDP INNER JOIN
+ Atacado202204.dbo.Funcionarios_Dados_Empresa AS FDE
+ ON FDP.Matricula_Funcionario = FDE.Matricula_Funcionario
+
+   GO
+
+   Select * From  Funcionario_Tempo

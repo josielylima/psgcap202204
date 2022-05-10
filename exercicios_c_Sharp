@@ -1,0 +1,208 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Cap202204ConsoleApp
+{
+    public class Program
+    {
+        public static int C { get; private set; }
+
+        static void Main(string[] args)
+        {
+            //Encontro21_Codigo01();
+            //Encontro21_Codigo02();
+            //Desafio_001();
+            // Desafio_002();
+            //desafio_003();
+            // desafio_004();
+            //desafio_005();
+            //desafio_006();
+            //desafio_007();
+            //desafio_008();
+            // desafio_009();
+            //desafio_010();
+            Console.ReadLine();
+        }
+        public static void Encontro21_Codigo01()
+        {
+
+            Console.WriteLine("Testando o laço while");
+            int i = 0;
+            while (i < 5)
+            {
+                Console.WriteLine(i);
+                i++;
+            }
+            Console.WriteLine("Testando o laço do...while");
+            i = 0;
+            do
+            {
+                Console.WriteLine(i);
+                i++;
+            }
+            while (i < 5);
+        }
+
+        public static void Encontro21_Codigo02()
+
+        {
+            int parada = 45;
+            for (int i = 0; i < parada; i++)
+            {
+                Console.WriteLine(" Mensagem {0} de {1} .", i, parada);
+
+            }
+            Console.WriteLine("Laço for terminou");
+
+        }
+
+
+        public static void Desafio_001()
+        {
+            Console.Write("Informe um valor:");
+            string valor = Console.ReadLine();
+            int num = Convert.ToInt32(valor);
+            int dobro = num * 2;
+            int triplo = num * 3;
+            double raiz = Math.Sqrt(num);
+
+            Console.WriteLine("O Dobro de {0} vale {1}.", valor, dobro);
+            Console.WriteLine("O triplo de {0} vale {1}", valor, triplo);
+            Console.WriteLine("A raiz de {0} vale {1}", valor, raiz);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static void Desafio_002()
+        {
+            Console.WriteLine("Informe a primeira nota:");
+            string snota1 = Console.ReadLine();
+            int inota1 = Convert.ToInt32(snota1);
+            Console.WriteLine("Informe a primeira nota:");
+            string snota2 = Console.ReadLine();
+            int inota2 = Convert.ToInt32(snota2);
+            double media = (inota1 + inota2) / 2;
+            Console.WriteLine("A média é: {0}", media);
+        }
+        //aqui continua
+
+        public static void desafio_003()
+        {
+            Console.WriteLine("Informe Metros? ");
+            string metro1 = Console.ReadLine();
+            int metro2 = Convert.ToInt32(metro1);
+            int cent = metro2 * 100;
+            int mili = cent * 10;
+            Console.WriteLine("valor centimetro é {0}, valor milimetro é {1}", cent, mili);
+
+
+        }
+
+
+
+        public static void desafio_004()
+        {
+            Console.WriteLine("informe o numero");
+            string valor = Console.ReadLine();
+            int num = Convert.ToInt32(valor);
+            for (int i = 1; i <= 10; i++)
+            {
+
+                Console.WriteLine(num * i);
+
+            }
+        }
+
+
+        public static void desafio_005()
+        {
+            Console.Write("Informe o valor em reais na sua carteira");
+            double reais = Convert.ToDouble(Console.ReadLine());
+            double dollar = reais / 5;
+            Console.WriteLine("Voce pode comprar {0} Dolares.", dollar);
+
+
+
+        }
+
+
+        public static void desafio_006()
+        {
+            Console.Write("Informe a Largura da Parede");
+            double Largura = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Informe a Altura da Parede:");
+            double Altura = Convert.ToDouble(Console.ReadLine());
+            double area = Largura * Altura;
+            double tinta = area / 2;
+            Console.WriteLine("A sua Parede tem a area de {0} metros quadrado, você precisara de {1} litro de tinta.", area, tinta);
+
+
+        }
+
+        public static void desafio_007()
+        {
+            Console.Write("Informe o valor do Produto");
+            double Produto = Convert.ToDouble(Console.ReadLine());
+            double Desconto = Produto - (Produto * 5 / 100);
+            Console.WriteLine("O Valor com Desconto do Produto é igual {0} Reais.", Desconto);
+
+
+
+        }
+
+        public static void desafio_008()
+        {
+            Console.Write("O Salario do Funcionario");
+            double Salario = Convert.ToDouble(Console.ReadLine());
+            double Aumento = Salario / 100 * 15;
+            Console.WriteLine("O valor do salario atual com aumento é igual a {0} Reais.", Aumento);
+        }
+
+        public static void desafio_009()
+        {
+            Console.Write("Informe a Temperatura do Grau Celsius");
+            double Celsius = Convert.ToDouble(Console.ReadLine());
+            double graus = 1.8000;
+            double Far = Celsius * graus + 32.00;
+            Console.WriteLine("A Temperatura informada de  Farenheit é {0}", Far);
+
+        }
+
+        public static void desafio_010()
+        {
+            Console.Write("Qual a quantidade do km percorrido do Carro?");
+            double carro = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Quantos dias precisou do carro Alugado?");
+            double Alugado = Convert.ToDouble(Console.ReadLine());
+            double dia = 60;
+            double kilometro = 0.15;
+            double tempo = (carro * kilometro) + (Alugado * dia) ;
+            Console.WriteLine("O valor a pagar pelo aluguel é {0}", tempo);  
+        }
+    }
+
+}
+            
+            
+            
+            
+
+
+            
+
+           
+        
+
+ 
+ 
+ 
+
+
+
+
+
+ 

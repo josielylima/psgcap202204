@@ -1,0 +1,83 @@
+ public static void desafio_016()
+        {
+            Console.WriteLine("informe o numero inteiro");
+
+            int indice = 0;
+            while (indice <= 20)
+            {
+                if ((indice % 2) == 0)
+                    Console.WriteLine(" O número {0} = par", indice);
+                else
+                {
+
+                    Console.WriteLine(" O número {0} = impar", indice);
+
+                }
+                indice++;
+                Console.ReadKey();
+
+            }
+
+
+        }
+
+        public static void desafio_017()
+        {
+
+            Console.WriteLine("Informe o seu nome: ");
+            string nome = Console.ReadLine();
+            Console.WriteLine("Ola meu Nome é {0}.", nome);
+            Console.WriteLine(nome.ToUpper());
+            Console.WriteLine(nome.ToLower());
+            string spaco = nome.Replace(" ", "");
+            Console.WriteLine(spaco.Count());
+            string[] palavra = nome.Split(' ');
+            Console.WriteLine(palavra[0].Count());
+        }
+
+
+
+        public static void desafio_018()
+        {
+            
+
+        }
+
+
+
+
+
+        public static void desafio_019()
+        {
+            int Idade;
+            Console.WriteLine("Informe sua idade" );
+            int.TryParse(Console.ReadLine(), out Idade);
+
+            if (Idade >=18)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Acesso Permitido");
+
+                
+                
+  }                else
+                        Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Acesso Negado");
+                }
+
+
+
+        public static void desafio_020()
+        {
+            Console.Write("Escreva uma Frase:");
+            string frase = Console.ReadLine();
+            string novaFrase = frase.Replace("A", "&").Replace("a", "&");
+            Console.WriteLine(novaFrase);
+
+        }           
+        
+               
+
+        }
+    }
+        

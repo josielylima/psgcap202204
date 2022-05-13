@@ -1,0 +1,25 @@
+static void Main (string[] desafio_01)
+        {
+            string situacaoFuncionario;
+            string respostasenao;-----------------coloca depois
+            Console.WriteLine("Vc esta gostando de trabalhar aqui ? Sim ou Não");
+            situacaoFuncionario = Console.ReadLine();
+
+            if (situacaoFuncionario.ToLower() == "Sim")
+            {
+                Console.WriteLine("vc gosta muito");
+            }
+            else
+
+            { if (situacaoFuncionario.ToLower() == "Nao")
+                    Console.WriteLine("Mas pq vc gosta de trabalhar Aqui");
+                respostasenao = Console.ReadLine();
+                Console.WriteLine("Sua Resposta é" + respostasenao);----------coloca depois de criada string la ensima
+
+               Console.ReadKey();
+            }
+        }
+        
+        
+    }
+}
